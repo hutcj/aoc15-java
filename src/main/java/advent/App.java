@@ -3,10 +3,39 @@
  */
 package advent;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+// import java.nio.file.Paths;
+
 public class App {
 
-    public static void main(String[] args) {
+    private static String inputsDir = "src/main/inputs";
 
-        Day01 d = new Day01();
+    public static void main(String[] args) throws IOException {
+        if (args.length > 0) {
+            try {
+                Integer.parseInt(args[0]);
+            } catch (NumberFormatException e) {
+                System.err.println("Day number must be an integer.");
+                System.exit(1);
+            }
+        } else {
+            System.out.println("Please select a Day to run.");
+            System.exit(1);
+        }
+        switch (args[0]) {
+            case "1":
+                Day01 d = new Day01();
+                String part1 = Files.readString(Path.of(inputsDir + "/day01/part1.txt"));
+                System.out.println(d.part1(part1));
+                break;
+            case "2":
+            break;
+            default:
+                System.out.println("Invalid selection. Please select a valid Day to run.");
+                System.exit(1);
+                break;
+        }
     }
 }
