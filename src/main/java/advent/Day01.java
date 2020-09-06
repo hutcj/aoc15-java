@@ -5,7 +5,39 @@ package advent;
 
 public class Day01 {
     public String part1(String input) {
-        return "0";
+        return String.valueOf(this.parseInstructions(input));
+    }
+
+    private int parseInstructions(String i) {
+        // System.out.println("Checking string " + i);
+        // System.out.println("Length is "+ i.length());
+        int count = 0;
+        try {
+            if (i.length() == 1) {
+                // System.out.println("FOUND BASE CASE!");
+                if (i.charAt(0) == '(') {
+                    count = 1;
+                } else if (i.charAt(0) == ')') {
+                    count = -1;
+                } else {
+                    System.out.println("Invalid character in input!");
+                    System.exit(1);
+                }
+            } else {
+                // System.out.println("EVALUATING CHARACTER: " + i.charAt(0));
+                if (i.charAt(0) == '(') {
+                    count = this.parseInstructions(i.substring(1, i.length())) + 1;
+                } else if (i.charAt(0) == ')') {
+                    count = this.parseInstructions(i.substring(1, i.length())) - 1;
+                } else {
+                    System.out.println("Invalid character in input!");
+                    System.exit(1);
+                }
+            }
+        } catch (Exception e) {
+            System.exit(1);
+        }
+        return count;
     }
 
     public Day01() {
