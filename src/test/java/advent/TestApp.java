@@ -69,14 +69,13 @@ public class TestApp {
             partOneTestDays.add(new Day02(t.get("input")));
         }
 
-        // for (HashMap<String,String> t : partTwoTests) {
-        //     //Execute each part 2 test and store reference object
-        //     partTwoTestDays.add(new Day02(t.get("input")));
-        // }
+        for (HashMap<String,String> t : partTwoTests) {
+            //Execute each part 2 test and store reference object
+            partTwoTestDays.add(new Day02(t.get("input")));
+        }
         
         //Compare expected vs actual results
-        // verifyAll();
-        checkTests(this.partOneTests, 1);
+        verifyAll();
     }
 
     private void verifyAll() {
