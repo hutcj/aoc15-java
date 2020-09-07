@@ -39,6 +39,10 @@ public class App {
                 setPuzzleInput();
                 day = new Day01(puzzleInput);
                 break;
+            // case 2:
+            //     setPuzzleInput();
+            //     day = new Day02(puzzleInput);
+            //     break;
             default:
                 System.out.println("Day " + dayNum + " not implemented.");
                 System.exit(1);
@@ -53,8 +57,8 @@ public class App {
         try {
             puzzleInput = Files.readString(Path.of(inputsDir + "/day" + dayNum + ".txt"));
         } catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
+            System.exit(1);
         }
     }
 }

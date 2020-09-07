@@ -37,15 +37,30 @@ public class TestApp {
         t2.add("()())","5");
         this.partTwoTests = t2.getTests();
 
-        for (HashMap<String,String> tt1 : partOneTests) {
-            partOneTestDays.add(new Day01(tt1.get("input")));
+        for (HashMap<String,String> t : partOneTests) {
+            //Execute each part 1 test and store reference object
+            partOneTestDays.add(new Day01(t.get("input")));
         }
 
-        for (HashMap<String,String> tt2 : partTwoTests) {
-            partTwoTestDays.add(new Day01(tt2.get("input")));
+        for (HashMap<String,String> t : partTwoTests) {
+            //Execute each part 2 test and store reference object
+            partTwoTestDays.add(new Day01(t.get("input")));
         }
         
+        //Compare expected vs actual results
         verifyAll();
+    }
+
+    @Test public void testDay02() {
+        //Part 1 prep
+        TestCase t1 = new TestCase();
+        t1.add("","");
+        this.partOneTests = t1.getTests();
+
+        //Part 2 prep
+        TestCase t2 = new TestCase();
+        t2.add("","");
+        this.partTwoTests = t2.getTests();
     }
 
     private void verifyAll() {

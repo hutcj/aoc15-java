@@ -39,16 +39,4 @@ public class Day01 extends PuzzleDay {
         
         this.partOneAnswer = String.valueOf(count);
     }
-
-    // public String partOne(String input) {
-    //     return 
-    // }
-
-    // public String partTwo(String input) {
-    //     return "0";
-    // }
-
-    // private int parseInstructions(String s) {
-        
-    // }
 }
