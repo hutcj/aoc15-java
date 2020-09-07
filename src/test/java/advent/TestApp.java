@@ -60,7 +60,8 @@ public class TestApp {
 
         //Part 2 prep
         TestCase t2 = new TestCase();
-        t2.add("","");
+        t2.add("2x3x4","34");
+        t2.add("1x1x10","14");
         this.partTwoTests = t2.getTests();
 
         for (HashMap<String,String> t : partOneTests) {

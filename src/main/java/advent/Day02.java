@@ -21,8 +21,12 @@ public class Day02 extends PuzzleDay {
         int w = 0;
         int h = 0;
         int sideAreas[] = new int[3];
+        int perimeters[] = new int[3];
+        int volume = 0;
         int lowestArea = 0;
+        int smallestPerimeter = 0;
         int totalArea = 0;
+        int totalRibbonLength = 0;
         boolean textAvailable = true;
         String checkBuffer = "";
         try {
@@ -38,9 +42,16 @@ public class Day02 extends PuzzleDay {
                     sideAreas[0] = l * w;
                     sideAreas[1] = w * h;
                     sideAreas[2] = h * l;
+                    perimeters[0] = 2 * (l + w);
+                    perimeters[1] = 2 * (w + h);
+                    perimeters[2] = 2 * (h + l);
                     Arrays.sort(sideAreas);
+                    Arrays.sort(perimeters);
                     lowestArea = sideAreas[0];
+                    smallestPerimeter = perimeters[0];
+                    volume = l * w * h;
                     totalArea += (2 * Arrays.stream(sideAreas).sum()) + lowestArea;
+                    totalRibbonLength += smallestPerimeter + volume;
                 }
             } while (textAvailable);
             reader.close();
@@ -50,7 +61,7 @@ public class Day02 extends PuzzleDay {
             System.exit(1);
         }
         this.partOneAnswer = String.valueOf(totalArea);
-        this.partTwoAnswer = "";
+        this.partTwoAnswer = String.valueOf(totalRibbonLength);
     }
     
 }
