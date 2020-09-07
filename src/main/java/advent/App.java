@@ -6,16 +6,19 @@ package advent;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-// import java.nio.file.Paths;
 
 public class App {
 
+    private static int dayNum;
     private static String inputsDir = "src/main/inputs";
+    private static String puzzleInput;
+    private static PuzzleDay day;
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
+        //parse CLI input
         if (args.length > 0) {
             try {
-                Integer.parseInt(args[0]);
+                dayNum = Integer.parseInt(args[0]);
             } catch (NumberFormatException e) {
                 System.err.println("Day number must be an integer.");
                 System.exit(1);
@@ -24,18 +27,34 @@ public class App {
             System.out.println("Please select a Day to run.");
             System.exit(1);
         }
-        switch (args[0]) {
-            case "1":
-                Day01 d = new Day01();
-                String part1 = Files.readString(Path.of(inputsDir + "/day01/part1.txt"));
-                System.out.println(d.part1(part1));
+
+        //Validate day number selection
+        if (dayNum < 1 || dayNum > 25) {
+            System.out.println("Invalid selection. Please select a valid Day to run.");
+            System.exit(1);
+        }
+        
+        switch (dayNum) {
+            case 1:
+                setPuzzleInput();
+                day = new Day01(puzzleInput);
                 break;
-            case "2":
-            break;
             default:
-                System.out.println("Invalid selection. Please select a valid Day to run.");
+                System.out.println("Day " + dayNum + " not implemented.");
                 System.exit(1);
                 break;
+        }
+
+        System.out.println("Part 1 Answer: " + day.partOne());
+        System.out.println("Part 2 Answer: " + day.partTwo());
+    }
+
+    private static void setPuzzleInput() {
+        try {
+            puzzleInput = Files.readString(Path.of(inputsDir + "/day" + dayNum + ".txt"));
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
         }
     }
 }

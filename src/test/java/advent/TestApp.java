@@ -5,32 +5,76 @@ package advent;
 
 import org.junit.Test;
 import static org.junit.Assert.*;
+
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
 
 
 public class TestApp {
-    private LinkedList<HashMap<String,String>> tests;
+    private LinkedList<HashMap<String,String>> partOneTests;
+    private LinkedList<HashMap<String,String>> partTwoTests;
+    private ArrayList<PuzzleDay> partOneTestDays = new ArrayList<PuzzleDay>();
+    private ArrayList<PuzzleDay> partTwoTestDays = new ArrayList<PuzzleDay>();
 
     @Test public void testDay01() {
-        TestCase t = new TestCase();
-        t.add("(())","0");
-        t.add("()()","0");
-        t.add("(((","3");
-        t.add("(()(()(","3");
-        t.add("))(((((","3");
-        t.add("())","-1");
-        t.add("))(","-1");
-        t.add(")))","-3");
-        t.add(")())())","-3");
-        this.tests = t.getTests();
+        //Prep part 1 test cases
+        TestCase t1 = new TestCase();
+        t1.add("(())","0");
+        t1.add("()()","0");
+        t1.add("(((","3");
+        t1.add("(()(()(","3");
+        t1.add("))(((((","3");
+        t1.add("())","-1");
+        t1.add("))(","-1");
+        t1.add(")))","-3");
+        t1.add(")())())","-3");
+        this.partOneTests = t1.getTests();
 
-        Day01 d1 = new Day01();
-        for (HashMap<String,String> c : this.tests){
-            String input = c.get("input");
-            String output = d1.part1(input);
-            String expectedOutput = c.get("output");
-            assertEquals("Test case failed! Input: " + input, expectedOutput, output);
+        //Prep part 2 test cases
+        TestCase t2 = new TestCase();
+        t2.add(")","1");
+        t2.add("()())","5");
+        this.partTwoTests = t2.getTests();
+
+        for (HashMap<String,String> tt1 : partOneTests) {
+            partOneTestDays.add(new Day01(tt1.get("input")));
+        }
+
+        for (HashMap<String,String> tt2 : partTwoTests) {
+            partTwoTestDays.add(new Day01(tt2.get("input")));
+        }
+        
+        verifyAll();
+    }
+
+    private void verifyAll() {
+        checkTests(this.partOneTests, 1);
+        checkTests(this.partTwoTests, 2);
+    }
+
+    private void checkTests(LinkedList<HashMap<String,String>> testSet, int partNum) {
+        int i = 0;
+        int dayNum = 0;
+        for (HashMap<String,String> testCase : testSet){
+            dayNum = partOneTestDays.get(i).getDay();
+            String input = testCase.get("input");
+            String expectedOutput = testCase.get("output");
+            String output = "";
+            switch (partNum) {
+                case 1:
+                    output = partOneTestDays.get(i).partOne();
+                    break;
+                case 2:
+                    output = partTwoTestDays.get(i).partTwo();
+                    break;
+                default:
+                    System.err.println("Invalid Part number ''" + partNum + "'' Selected for Day " + dayNum + " Test.");
+                    System.exit(1);
+                    break;
+            }
+            assertEquals("Day " + dayNum + " Part " + partNum + " failed for input: " + input, expectedOutput, output);
+            i++;
         }
     }
 }

@@ -3,18 +3,22 @@
  */
 package advent;
 
-public class Day01 {
-    public Day01() {}
-    
-    public String part1(String input) {
-        return String.valueOf(this.parseInstructions(input));
+public class Day01 extends PuzzleDay {
+    public Day01(String puzzleInput) {
+        super(puzzleInput);
     }
 
-    private int parseInstructions(String s) {
+    public int getDay() {
+        return 1;
+    }
+
+    protected void solvePuzzle(String s) {
         int count = 0;
-        
+        boolean basementFound = false;
+        int totalLength = s.length();
+
         if (s.length() < 1) {
-            return count;
+            return;
         }
         
         do {
@@ -27,8 +31,24 @@ public class Day01 {
                 System.exit(1);
             }
             s = s.substring(1, s.length());
+            if (!basementFound && count < 0) {
+                basementFound = true;
+                this.partTwoAnswer = String.valueOf(totalLength - s.length());
+            }
         } while (s.length() >= 1);
         
-        return count;
+        this.partOneAnswer = String.valueOf(count);
     }
+
+    // public String partOne(String input) {
+    //     return 
+    // }
+
+    // public String partTwo(String input) {
+    //     return "0";
+    // }
+
+    // private int parseInstructions(String s) {
+        
+    // }
 }
