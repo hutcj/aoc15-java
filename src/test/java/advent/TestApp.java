@@ -78,6 +78,627 @@ public class TestApp {
         verifyAll();
     }
 
+    @Test public void testDay03() {
+        //Part 1 prep
+        TestCase t1 = new TestCase();
+        t1.add("","");
+        t1.add("","");
+        this.partOneTests = t1.getTests();
+
+        //Part 2 prep
+        TestCase t2 = new TestCase();
+        t2.add("","");
+        t2.add("","");
+        this.partTwoTests = t2.getTests();
+
+        for (HashMap<String,String> t : partOneTests) {
+            //Execute each part 1 test and store reference object
+            partOneTestDays.add(new Day03(t.get("input")));
+        }
+
+        for (HashMap<String,String> t : partTwoTests) {
+            //Execute each part 2 test and store reference object
+            partTwoTestDays.add(new Day03(t.get("input")));
+        }
+        
+        //Compare expected vs actual results
+        verifyAll();
+    }
+
+    @Test public void testDay04() {
+        //Part 1 prep
+        TestCase t1 = new TestCase();
+        t1.add("","");
+        t1.add("","");
+        this.partOneTests = t1.getTests();
+
+        //Part 2 prep
+        TestCase t2 = new TestCase();
+        t2.add("","");
+        t2.add("","");
+        this.partTwoTests = t2.getTests();
+
+        for (HashMap<String,String> t : partOneTests) {
+            //Execute each part 1 test and store reference object
+            partOneTestDays.add(new Day04(t.get("input")));
+        }
+
+        for (HashMap<String,String> t : partTwoTests) {
+            //Execute each part 2 test and store reference object
+            partTwoTestDays.add(new Day04(t.get("input")));
+        }
+        
+        //Compare expected vs actual results
+        verifyAll();
+    }
+
+    @Test public void testDay05() {
+        //Part 1 prep
+        TestCase t1 = new TestCase();
+        t1.add("","");
+        t1.add("","");
+        this.partOneTests = t1.getTests();
+
+        //Part 2 prep
+        TestCase t2 = new TestCase();
+        t2.add("","");
+        t2.add("","");
+        this.partTwoTests = t2.getTests();
+
+        for (HashMap<String,String> t : partOneTests) {
+            //Execute each part 1 test and store reference object
+            partOneTestDays.add(new Day05(t.get("input")));
+        }
+
+        for (HashMap<String,String> t : partTwoTests) {
+            //Execute each part 2 test and store reference object
+            partTwoTestDays.add(new Day05(t.get("input")));
+        }
+        
+        //Compare expected vs actual results
+        verifyAll();
+    }
+
+    @Test public void testDay06() {
+        //Part 1 prep
+        TestCase t1 = new TestCase();
+        t1.add("","");
+        t1.add("","");
+        this.partOneTests = t1.getTests();
+
+        //Part 2 prep
+        TestCase t2 = new TestCase();
+        t2.add("","");
+        t2.add("","");
+        this.partTwoTests = t2.getTests();
+
+        for (HashMap<String,String> t : partOneTests) {
+            //Execute each part 1 test and store reference object
+            partOneTestDays.add(new Day06(t.get("input")));
+        }
+
+        for (HashMap<String,String> t : partTwoTests) {
+            //Execute each part 2 test and store reference object
+            partTwoTestDays.add(new Day06(t.get("input")));
+        }
+        
+        //Compare expected vs actual results
+        verifyAll();
+    }
+
+    @Test public void testDay07() {
+        //Part 1 prep
+        TestCase t1 = new TestCase();
+        t1.add("","");
+        t1.add("","");
+        this.partOneTests = t1.getTests();
+
+        //Part 2 prep
+        TestCase t2 = new TestCase();
+        t2.add("","");
+        t2.add("","");
+        this.partTwoTests = t2.getTests();
+
+        for (HashMap<String,String> t : partOneTests) {
+            //Execute each part 1 test and store reference object
+            partOneTestDays.add(new Day07(t.get("input")));
+        }
+
+        for (HashMap<String,String> t : partTwoTests) {
+            //Execute each part 2 test and store reference object
+            partTwoTestDays.add(new Day07(t.get("input")));
+        }
+        
+        //Compare expected vs actual results
+        verifyAll();
+    }
+
+    @Test public void testDay08() {
+        //Part 1 prep
+        TestCase t1 = new TestCase();
+        t1.add("","");
+        t1.add("","");
+        this.partOneTests = t1.getTests();
+
+        //Part 2 prep
+        TestCase t2 = new TestCase();
+        t2.add("","");
+        t2.add("","");
+        this.partTwoTests = t2.getTests();
+
+        for (HashMap<String,String> t : partOneTests) {
+            //Execute each part 1 test and store reference object
+            partOneTestDays.add(new Day08(t.get("input")));
+        }
+
+        for (HashMap<String,String> t : partTwoTests) {
+            //Execute each part 2 test and store reference object
+            partTwoTestDays.add(new Day08(t.get("input")));
+        }
+        
+        //Compare expected vs actual results
+        verifyAll();
+    }
+
+    @Test public void testDay09() {
+        //Part 1 prep
+        TestCase t1 = new TestCase();
+        t1.add("","");
+        t1.add("","");
+        this.partOneTests = t1.getTests();
+
+        //Part 2 prep
+        TestCase t2 = new TestCase();
+        t2.add("","");
+        t2.add("","");
+        this.partTwoTests = t2.getTests();
+
+        for (HashMap<String,String> t : partOneTests) {
+            //Execute each part 1 test and store reference object
+            partOneTestDays.add(new Day09(t.get("input")));
+        }
+
+        for (HashMap<String,String> t : partTwoTests) {
+            //Execute each part 2 test and store reference object
+            partTwoTestDays.add(new Day09(t.get("input")));
+        }
+        
+        //Compare expected vs actual results
+        verifyAll();
+    }
+
+    @Test public void testDay10() {
+        //Part 1 prep
+        TestCase t1 = new TestCase();
+        t1.add("","");
+        t1.add("","");
+        this.partOneTests = t1.getTests();
+
+        //Part 2 prep
+        TestCase t2 = new TestCase();
+        t2.add("","");
+        t2.add("","");
+        this.partTwoTests = t2.getTests();
+
+        for (HashMap<String,String> t : partOneTests) {
+            //Execute each part 1 test and store reference object
+            partOneTestDays.add(new Day10(t.get("input")));
+        }
+
+        for (HashMap<String,String> t : partTwoTests) {
+            //Execute each part 2 test and store reference object
+            partTwoTestDays.add(new Day10(t.get("input")));
+        }
+        
+        //Compare expected vs actual results
+        verifyAll();
+    }
+
+    @Test public void testDay11() {
+        //Part 1 prep
+        TestCase t1 = new TestCase();
+        t1.add("","");
+        t1.add("","");
+        this.partOneTests = t1.getTests();
+
+        //Part 2 prep
+        TestCase t2 = new TestCase();
+        t2.add("","");
+        t2.add("","");
+        this.partTwoTests = t2.getTests();
+
+        for (HashMap<String,String> t : partOneTests) {
+            //Execute each part 1 test and store reference object
+            partOneTestDays.add(new Day11(t.get("input")));
+        }
+
+        for (HashMap<String,String> t : partTwoTests) {
+            //Execute each part 2 test and store reference object
+            partTwoTestDays.add(new Day11(t.get("input")));
+        }
+        
+        //Compare expected vs actual results
+        verifyAll();
+    }
+
+    @Test public void testDay12() {
+        //Part 1 prep
+        TestCase t1 = new TestCase();
+        t1.add("","");
+        t1.add("","");
+        this.partOneTests = t1.getTests();
+
+        //Part 2 prep
+        TestCase t2 = new TestCase();
+        t2.add("","");
+        t2.add("","");
+        this.partTwoTests = t2.getTests();
+
+        for (HashMap<String,String> t : partOneTests) {
+            //Execute each part 1 test and store reference object
+            partOneTestDays.add(new Day12(t.get("input")));
+        }
+
+        for (HashMap<String,String> t : partTwoTests) {
+            //Execute each part 2 test and store reference object
+            partTwoTestDays.add(new Day12(t.get("input")));
+        }
+        
+        //Compare expected vs actual results
+        verifyAll();
+    }
+
+    @Test public void testDay13() {
+        //Part 1 prep
+        TestCase t1 = new TestCase();
+        t1.add("","");
+        t1.add("","");
+        this.partOneTests = t1.getTests();
+
+        //Part 2 prep
+        TestCase t2 = new TestCase();
+        t2.add("","");
+        t2.add("","");
+        this.partTwoTests = t2.getTests();
+
+        for (HashMap<String,String> t : partOneTests) {
+            //Execute each part 1 test and store reference object
+            partOneTestDays.add(new Day13(t.get("input")));
+        }
+
+        for (HashMap<String,String> t : partTwoTests) {
+            //Execute each part 2 test and store reference object
+            partTwoTestDays.add(new Day13(t.get("input")));
+        }
+        
+        //Compare expected vs actual results
+        verifyAll();
+    }
+
+    @Test public void testDay14() {
+        //Part 1 prep
+        TestCase t1 = new TestCase();
+        t1.add("","");
+        t1.add("","");
+        this.partOneTests = t1.getTests();
+
+        //Part 2 prep
+        TestCase t2 = new TestCase();
+        t2.add("","");
+        t2.add("","");
+        this.partTwoTests = t2.getTests();
+
+        for (HashMap<String,String> t : partOneTests) {
+            //Execute each part 1 test and store reference object
+            partOneTestDays.add(new Day14(t.get("input")));
+        }
+
+        for (HashMap<String,String> t : partTwoTests) {
+            //Execute each part 2 test and store reference object
+            partTwoTestDays.add(new Day14(t.get("input")));
+        }
+        
+        //Compare expected vs actual results
+        verifyAll();
+    }
+
+    @Test public void testDay15() {
+        //Part 1 prep
+        TestCase t1 = new TestCase();
+        t1.add("","");
+        t1.add("","");
+        this.partOneTests = t1.getTests();
+
+        //Part 2 prep
+        TestCase t2 = new TestCase();
+        t2.add("","");
+        t2.add("","");
+        this.partTwoTests = t2.getTests();
+
+        for (HashMap<String,String> t : partOneTests) {
+            //Execute each part 1 test and store reference object
+            partOneTestDays.add(new Day15(t.get("input")));
+        }
+
+        for (HashMap<String,String> t : partTwoTests) {
+            //Execute each part 2 test and store reference object
+            partTwoTestDays.add(new Day15(t.get("input")));
+        }
+        
+        //Compare expected vs actual results
+        verifyAll();
+    }
+
+    @Test public void testDay16() {
+        //Part 1 prep
+        TestCase t1 = new TestCase();
+        t1.add("","");
+        t1.add("","");
+        this.partOneTests = t1.getTests();
+
+        //Part 2 prep
+        TestCase t2 = new TestCase();
+        t2.add("","");
+        t2.add("","");
+        this.partTwoTests = t2.getTests();
+
+        for (HashMap<String,String> t : partOneTests) {
+            //Execute each part 1 test and store reference object
+            partOneTestDays.add(new Day16(t.get("input")));
+        }
+
+        for (HashMap<String,String> t : partTwoTests) {
+            //Execute each part 2 test and store reference object
+            partTwoTestDays.add(new Day16(t.get("input")));
+        }
+        
+        //Compare expected vs actual results
+        verifyAll();
+    }
+
+    @Test public void testDay17() {
+        //Part 1 prep
+        TestCase t1 = new TestCase();
+        t1.add("","");
+        t1.add("","");
+        this.partOneTests = t1.getTests();
+
+        //Part 2 prep
+        TestCase t2 = new TestCase();
+        t2.add("","");
+        t2.add("","");
+        this.partTwoTests = t2.getTests();
+
+        for (HashMap<String,String> t : partOneTests) {
+            //Execute each part 1 test and store reference object
+            partOneTestDays.add(new Day17(t.get("input")));
+        }
+
+        for (HashMap<String,String> t : partTwoTests) {
+            //Execute each part 2 test and store reference object
+            partTwoTestDays.add(new Day17(t.get("input")));
+        }
+        
+        //Compare expected vs actual results
+        verifyAll();
+    }
+
+    @Test public void testDay18() {
+        //Part 1 prep
+        TestCase t1 = new TestCase();
+        t1.add("","");
+        t1.add("","");
+        this.partOneTests = t1.getTests();
+
+        //Part 2 prep
+        TestCase t2 = new TestCase();
+        t2.add("","");
+        t2.add("","");
+        this.partTwoTests = t2.getTests();
+
+        for (HashMap<String,String> t : partOneTests) {
+            //Execute each part 1 test and store reference object
+            partOneTestDays.add(new Day18(t.get("input")));
+        }
+
+        for (HashMap<String,String> t : partTwoTests) {
+            //Execute each part 2 test and store reference object
+            partTwoTestDays.add(new Day18(t.get("input")));
+        }
+        
+        //Compare expected vs actual results
+        verifyAll();
+    }
+
+    @Test public void testDay19() {
+        //Part 1 prep
+        TestCase t1 = new TestCase();
+        t1.add("","");
+        t1.add("","");
+        this.partOneTests = t1.getTests();
+
+        //Part 2 prep
+        TestCase t2 = new TestCase();
+        t2.add("","");
+        t2.add("","");
+        this.partTwoTests = t2.getTests();
+
+        for (HashMap<String,String> t : partOneTests) {
+            //Execute each part 1 test and store reference object
+            partOneTestDays.add(new Day19(t.get("input")));
+        }
+
+        for (HashMap<String,String> t : partTwoTests) {
+            //Execute each part 2 test and store reference object
+            partTwoTestDays.add(new Day19(t.get("input")));
+        }
+        
+        //Compare expected vs actual results
+        verifyAll();
+    }
+
+    @Test public void testDay20() {
+        //Part 1 prep
+        TestCase t1 = new TestCase();
+        t1.add("","");
+        t1.add("","");
+        this.partOneTests = t1.getTests();
+
+        //Part 2 prep
+        TestCase t2 = new TestCase();
+        t2.add("","");
+        t2.add("","");
+        this.partTwoTests = t2.getTests();
+
+        for (HashMap<String,String> t : partOneTests) {
+            //Execute each part 1 test and store reference object
+            partOneTestDays.add(new Day20(t.get("input")));
+        }
+
+        for (HashMap<String,String> t : partTwoTests) {
+            //Execute each part 2 test and store reference object
+            partTwoTestDays.add(new Day20(t.get("input")));
+        }
+        
+        //Compare expected vs actual results
+        verifyAll();
+    }
+
+    @Test public void testDay21() {
+        //Part 1 prep
+        TestCase t1 = new TestCase();
+        t1.add("","");
+        t1.add("","");
+        this.partOneTests = t1.getTests();
+
+        //Part 2 prep
+        TestCase t2 = new TestCase();
+        t2.add("","");
+        t2.add("","");
+        this.partTwoTests = t2.getTests();
+
+        for (HashMap<String,String> t : partOneTests) {
+            //Execute each part 1 test and store reference object
+            partOneTestDays.add(new Day21(t.get("input")));
+        }
+
+        for (HashMap<String,String> t : partTwoTests) {
+            //Execute each part 2 test and store reference object
+            partTwoTestDays.add(new Day21(t.get("input")));
+        }
+        
+        //Compare expected vs actual results
+        verifyAll();
+    }
+
+    @Test public void testDay22() {
+        //Part 1 prep
+        TestCase t1 = new TestCase();
+        t1.add("","");
+        t1.add("","");
+        this.partOneTests = t1.getTests();
+
+        //Part 2 prep
+        TestCase t2 = new TestCase();
+        t2.add("","");
+        t2.add("","");
+        this.partTwoTests = t2.getTests();
+
+        for (HashMap<String,String> t : partOneTests) {
+            //Execute each part 1 test and store reference object
+            partOneTestDays.add(new Day22(t.get("input")));
+        }
+
+        for (HashMap<String,String> t : partTwoTests) {
+            //Execute each part 2 test and store reference object
+            partTwoTestDays.add(new Day22(t.get("input")));
+        }
+        
+        //Compare expected vs actual results
+        verifyAll();
+    }
+
+    @Test public void testDay23() {
+        //Part 1 prep
+        TestCase t1 = new TestCase();
+        t1.add("","");
+        t1.add("","");
+        this.partOneTests = t1.getTests();
+
+        //Part 2 prep
+        TestCase t2 = new TestCase();
+        t2.add("","");
+        t2.add("","");
+        this.partTwoTests = t2.getTests();
+
+        for (HashMap<String,String> t : partOneTests) {
+            //Execute each part 1 test and store reference object
+            partOneTestDays.add(new Day23(t.get("input")));
+        }
+
+        for (HashMap<String,String> t : partTwoTests) {
+            //Execute each part 2 test and store reference object
+            partTwoTestDays.add(new Day23(t.get("input")));
+        }
+        
+        //Compare expected vs actual results
+        verifyAll();
+    }
+
+    @Test public void testDay24() {
+        //Part 1 prep
+        TestCase t1 = new TestCase();
+        t1.add("","");
+        t1.add("","");
+        this.partOneTests = t1.getTests();
+
+        //Part 2 prep
+        TestCase t2 = new TestCase();
+        t2.add("","");
+        t2.add("","");
+        this.partTwoTests = t2.getTests();
+
+        for (HashMap<String,String> t : partOneTests) {
+            //Execute each part 1 test and store reference object
+            partOneTestDays.add(new Day24(t.get("input")));
+        }
+
+        for (HashMap<String,String> t : partTwoTests) {
+            //Execute each part 2 test and store reference object
+            partTwoTestDays.add(new Day24(t.get("input")));
+        }
+        
+        //Compare expected vs actual results
+        verifyAll();
+    }
+
+    @Test public void testDay25() {
+        //Part 1 prep
+        TestCase t1 = new TestCase();
+        t1.add("","");
+        t1.add("","");
+        this.partOneTests = t1.getTests();
+
+        //Part 2 prep
+        TestCase t2 = new TestCase();
+        t2.add("","");
+        t2.add("","");
+        this.partTwoTests = t2.getTests();
+
+        for (HashMap<String,String> t : partOneTests) {
+            //Execute each part 1 test and store reference object
+            partOneTestDays.add(new Day25(t.get("input")));
+        }
+
+        for (HashMap<String,String> t : partTwoTests) {
+            //Execute each part 2 test and store reference object
+            partTwoTestDays.add(new Day25(t.get("input")));
+        }
+        
+        //Compare expected vs actual results
+        verifyAll();
+    }
+
     private void verifyAll() {
         checkTests(this.partOneTests, 1);
         checkTests(this.partTwoTests, 2);

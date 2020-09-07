@@ -43,6 +43,98 @@ public class App {
                 setPuzzleInput();
                 day = new Day02(puzzleInput);
                 break;
+            case 3:
+                setPuzzleInput();
+                day = new Day03(puzzleInput);
+                break;
+            case 4:
+                setPuzzleInput();
+                day = new Day04(puzzleInput);
+                break;
+            case 5:
+                setPuzzleInput();
+                day = new Day05(puzzleInput);
+                break;
+            case 6:
+                setPuzzleInput();
+                day = new Day06(puzzleInput);
+                break;
+            case 7:
+                setPuzzleInput();
+                day = new Day07(puzzleInput);
+                break;
+            case 8:
+                setPuzzleInput();
+                day = new Day08(puzzleInput);
+                break;
+            case 9:
+                setPuzzleInput();
+                day = new Day09(puzzleInput);
+                break;
+            case 10:
+                setPuzzleInput();
+                day = new Day10(puzzleInput);
+                break;
+            case 11:
+                setPuzzleInput();
+                day = new Day11(puzzleInput);
+                break;
+            case 12:
+                setPuzzleInput();
+                day = new Day12(puzzleInput);
+                break;
+            case 13:
+                setPuzzleInput();
+                day = new Day13(puzzleInput);
+                break;
+            case 14:
+                setPuzzleInput();
+                day = new Day14(puzzleInput);
+                break;
+            case 15:
+                setPuzzleInput();
+                day = new Day15(puzzleInput);
+                break;
+            case 16:
+                setPuzzleInput();
+                day = new Day16(puzzleInput);
+                break;
+            case 17:
+                setPuzzleInput();
+                day = new Day17(puzzleInput);
+                break;
+            case 18:
+                setPuzzleInput();
+                day = new Day18(puzzleInput);
+                break;
+            case 19:
+                setPuzzleInput();
+                day = new Day19(puzzleInput);
+                break;
+            case 20:
+                setPuzzleInput();
+                day = new Day20(puzzleInput);
+                break;
+            case 21:
+                setPuzzleInput();
+                day = new Day21(puzzleInput);
+                break;
+            case 22:
+                setPuzzleInput();
+                day = new Day22(puzzleInput);
+                break;
+            case 23:
+                setPuzzleInput();
+                day = new Day23(puzzleInput);
+                break;
+            case 24:
+                setPuzzleInput();
+                day = new Day24(puzzleInput);
+                break;
+            case 25:
+                setPuzzleInput();
+                day = new Day25(puzzleInput);
+                break;
             default:
                 System.out.println("Day " + dayNum + " not implemented.");
                 System.exit(1);
