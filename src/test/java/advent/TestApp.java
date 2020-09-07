@@ -17,6 +17,36 @@ public class TestApp {
     private ArrayList<PuzzleDay> partOneTestDays = new ArrayList<PuzzleDay>();
     private ArrayList<PuzzleDay> partTwoTestDays = new ArrayList<PuzzleDay>();
 
+    private void verifyAll() {
+        checkTests(this.partOneTests, 1);
+        checkTests(this.partTwoTests, 2);
+    }
+
+    private void checkTests(LinkedList<HashMap<String,String>> testSet, int partNum) {
+        int i = 0;
+        int dayNum = 0;
+        for (HashMap<String,String> testCase : testSet){
+            dayNum = partOneTestDays.get(i).getDay();
+            String input = testCase.get("input");
+            String expectedOutput = testCase.get("output");
+            String output = "";
+            switch (partNum) {
+                case 1:
+                    output = partOneTestDays.get(i).partOne();
+                    break;
+                case 2:
+                    output = partTwoTestDays.get(i).partTwo();
+                    break;
+                default:
+                    System.err.println("Invalid Part number ''" + partNum + "'' Selected for Day " + dayNum + " Test.");
+                    System.exit(1);
+                    break;
+            }
+            assertEquals("Day " + dayNum + " Part " + partNum + " failed for input: " + input, expectedOutput, output);
+            i++;
+        }
+    }
+
     @Test public void testDay01() {
         //Prep part 1 test cases
         TestCase t1 = new TestCase();
@@ -81,8 +111,9 @@ public class TestApp {
     @Test public void testDay03() {
         //Part 1 prep
         TestCase t1 = new TestCase();
-        t1.add("","");
-        t1.add("","");
+        t1.add(">","2");
+        t1.add("^>v<","4");
+        t1.add("^v^v^v^v^v","2");
         this.partOneTests = t1.getTests();
 
         //Part 2 prep
@@ -697,35 +728,5 @@ public class TestApp {
         
         //Compare expected vs actual results
         verifyAll();
-    }
-
-    private void verifyAll() {
-        checkTests(this.partOneTests, 1);
-        checkTests(this.partTwoTests, 2);
-    }
-
-    private void checkTests(LinkedList<HashMap<String,String>> testSet, int partNum) {
-        int i = 0;
-        int dayNum = 0;
-        for (HashMap<String,String> testCase : testSet){
-            dayNum = partOneTestDays.get(i).getDay();
-            String input = testCase.get("input");
-            String expectedOutput = testCase.get("output");
-            String output = "";
-            switch (partNum) {
-                case 1:
-                    output = partOneTestDays.get(i).partOne();
-                    break;
-                case 2:
-                    output = partTwoTestDays.get(i).partTwo();
-                    break;
-                default:
-                    System.err.println("Invalid Part number ''" + partNum + "'' Selected for Day " + dayNum + " Test.");
-                    System.exit(1);
-                    break;
-            }
-            assertEquals("Day " + dayNum + " Part " + partNum + " failed for input: " + input, expectedOutput, output);
-            i++;
-        }
     }
 }

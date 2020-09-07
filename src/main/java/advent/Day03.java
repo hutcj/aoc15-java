@@ -3,6 +3,9 @@
  */
 package advent;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+
 public class Day03 extends PuzzleDay {
     public Day03(String puzzleInput) {
         super(puzzleInput);
@@ -13,7 +16,48 @@ public class Day03 extends PuzzleDay {
     }
 
     protected void solvePuzzle(String s) {
-        this.partOneAnswer = "";
+        int x = 0;
+        int y = 0;
+
+        String map = "";
+        int count = 0;
+
+        HashMap<String,Integer> housesWithPresents = new HashMap<String,Integer>();
+        housesWithPresents.put("0,0", 1);
+
+        if (s.length() < 1) {
+            return;
+        }
+
+        do {
+            switch (s.charAt(0)) {
+                case '<':
+                    x--;
+                    break;
+                case '>':
+                    x++;
+                    break;
+                case 'v':
+                    y--;
+                    break;
+                case '^':
+                    y++;
+                    break;
+                default:
+                    System.err.println("Invalid character '" + s.charAt(0) + "' in string!");
+                    System.exit(1);
+                    break;
+            }
+            map = String.valueOf(x) + "," + String.valueOf(y);
+            count = 0;
+            if (housesWithPresents.containsKey(map)) {
+                count = housesWithPresents.get(map);
+            }
+            count++;
+            housesWithPresents.put(map, count);
+            s = s.substring(1, s.length());
+        } while (s.length() >= 1);
+        this.partOneAnswer = String.valueOf(housesWithPresents.size());
         this.partTwoAnswer = "";
     }
 }
