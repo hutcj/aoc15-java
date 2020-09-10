@@ -18,29 +18,58 @@ public class Day03 extends PuzzleDay {
     protected void solvePuzzle(String s) {
         int x = 0;
         int y = 0;
+        int santaX = 0;
+        int santaY = 0;
+        int roboX = 0;
+        int roboY = 0;
+        boolean santaTurn = true;
 
         String map = "";
         int count = 0;
 
         HashMap<String,Integer> housesWithPresents = new HashMap<String,Integer>();
-        housesWithPresents.put("0,0", 1);
+        housesWithPresents.put("0,0", 1); //present at starting location
+
+        HashMap<String,Integer> housesWithPresentsYear2 = new HashMap<String,Integer>();
+        housesWithPresentsYear2.put("0,0", 2); //2 presents at starting location (santa + robosanta)
 
         if (s.length() < 1) {
             return;
         }
 
         do {
+            //update locations
             switch (s.charAt(0)) {
                 case '<':
+                    if (santaTurn) {
+                        santaX--;
+                    } else {
+                        roboX--;
+                    }
                     x--;
                     break;
                 case '>':
+                    if (santaTurn) {
+                        santaX++;
+                    } else {
+                        roboX++;
+                    }
                     x++;
                     break;
                 case 'v':
+                    if (santaTurn) {
+                        santaY--;
+                    } else {
+                        roboY--;
+                    }
                     y--;
                     break;
                 case '^':
+                    if (santaTurn) {
+                        santaY++;
+                    } else {
+                        roboY++;
+                    }
                     y++;
                     break;
                 default:
@@ -48,6 +77,8 @@ public class Day03 extends PuzzleDay {
                     System.exit(1);
                     break;
             }
+
+            //record present given to house
             map = String.valueOf(x) + "," + String.valueOf(y);
             count = 0;
             if (housesWithPresents.containsKey(map)) {
@@ -55,9 +86,25 @@ public class Day03 extends PuzzleDay {
             }
             count++;
             housesWithPresents.put(map, count);
+
+            //record present given to house in year 2 model with robosanta
+            if (santaTurn) {
+                map = String.valueOf(santaX) + "," + String.valueOf(santaY);
+            } else {
+                map = String.valueOf(roboX) + "," + String.valueOf(roboY);
+            }
+            count = 0;
+            if (housesWithPresentsYear2.containsKey(map)) {
+                count = housesWithPresentsYear2.get(map);
+            }
+            count++;
+            housesWithPresentsYear2.put(map, count);
+            santaTurn = !santaTurn;
+
+            //begin next iteration
             s = s.substring(1, s.length());
         } while (s.length() >= 1);
         this.partOneAnswer = String.valueOf(housesWithPresents.size());
-        this.partTwoAnswer = "";
+        this.partTwoAnswer = String.valueOf(housesWithPresentsYear2.size());
     }
 }

@@ -118,8 +118,9 @@ public class TestApp {
 
         //Part 2 prep
         TestCase t2 = new TestCase();
-        t2.add("","");
-        t2.add("","");
+        t2.add("^v","3");
+        t2.add("^>v<","3");
+        t2.add("^v^v^v^v^v","11");
         this.partTwoTests = t2.getTests();
 
         for (HashMap<String,String> t : partOneTests) {
